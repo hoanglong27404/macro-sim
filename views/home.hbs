@@ -1,0 +1,89 @@
+<div class="home-screen">
+  <div class="home-header">
+    <div class="badge-pill">
+      <span class="badge-dot"></span>
+      MLN111 — Kinh tế Chính trị Mác-Lênin
+    </div>
+    <h1 class="home-title">
+      <span class="title-line">Hệ thống</span>
+      <span class="title-line gradient-text">Giả lập Vĩ mô</span>
+    </h1>
+    <p class="home-subtitle">
+      Bạn sẽ đưa ra quyết sách cho 10 cuộc khủng hoảng kinh tế thực tế.<br/>
+      Cuối cùng, hệ thống sẽ phân tích <strong>tư duy kinh tế</strong> ẩn sâu trong bạn.
+    </p>
+  </div>
+
+  <div class="ideology-cards">
+    <div class="ideology-card card-free">
+      <div class="card-flag">🇺🇸</div>
+      <div class="card-label">KTTT Tự do</div>
+      <div class="card-country">Mỹ</div>
+    </div>
+    <div class="ideology-divider">
+      <span class="vs-text">VS</span>
+    </div>
+    <div class="ideology-card card-socialist">
+      <div class="card-flag">🇨🇳</div>
+      <div class="card-label">KTTT XHCN</div>
+      <div class="card-country">Trung Quốc</div>
+    </div>
+    <div class="ideology-divider">
+      <span class="vs-text">VS</span>
+    </div>
+    <div class="ideology-card card-vn">
+      <div class="card-flag">🇻🇳</div>
+      <div class="card-label">KTTT ĐHXHCN</div>
+      <div class="card-country">Việt Nam</div>
+    </div>
+  </div>
+
+  <div class="gender-selection">
+    <p class="gender-label">Chọn giao diện của bạn</p>
+    <div class="gender-buttons">
+      <button class="gender-btn btn-male" onclick="selectGender('male')">
+        <span class="gender-icon">⚡</span>
+        <span class="gender-name">Nam</span>
+        <span class="gender-desc">Xanh — Mạnh mẽ</span>
+      </button>
+      <button class="gender-btn btn-female" onclick="selectGender('female')">
+        <span class="gender-icon">✨</span>
+        <span class="gender-name">Nữ</span>
+        <span class="gender-desc">Hồng — Rực rỡ</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="name-input-wrap" id="nameInputSection" style="display:none">
+    <input
+      type="text"
+      id="playerName"
+      class="name-input"
+      placeholder="Nhập tên của bạn..."
+      maxlength="30"
+      oninput="clearNameError()"
+    />
+    <p class="name-error" id="nameError" style="display:none">Vui lòng nhập tên trước khi bắt đầu!</p>
+    <button class="start-btn" id="startBtn" onclick="startGame()">
+      <span>Bắt đầu Giả lập</span>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <path d="M5 12h14M12 5l7 7-7 7"/>
+      </svg>
+    </button>
+  </div>
+
+  <div class="home-stats">
+    <div class="stat-item">
+      <span class="stat-num">10</span>
+      <span class="stat-label">Sự kiện thực tế</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">3</span>
+      <span class="stat-label">Hệ tư tưởng</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">AI</span>
+      <span class="stat-label">Phân tích bởi Gemini</span>
+    </div>
+  </div>
+</div>
