@@ -250,12 +250,9 @@ function renderVerdict(data, state) {
   document.getElementById('verdictFlag').textContent = v.flag;
   document.getElementById('verdictName').textContent = v.name;
 
-  if (state.playerName) {
-    const label = document.getElementById('verdictBadge');
-    const nameEl = document.createElement('div');
-    nameEl.style.cssText = 'font-size:20px;font-weight:700;color:var(--text-primary);margin-bottom:6px;';
-    nameEl.textContent = state.playerName;
-    label?.prepend(nameEl);
+  const nameWrap = document.getElementById('verdictPlayerName');
+  if (nameWrap && state.playerName) {
+    nameWrap.textContent = state.playerName;
   }
 
   animateRing(data.consistency || 0);
