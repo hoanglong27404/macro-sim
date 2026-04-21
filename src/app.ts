@@ -14,7 +14,6 @@ app.engine('hbs', engine({
   extname: '.hbs',
   defaultLayout: 'main',
   layoutsDir: path.join(__dirname, '../views/layouts'),
-  partialsDir: path.join(__dirname, '../views/partials'),
 }));
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, '../views'));
@@ -25,6 +24,8 @@ app.use(express.static(path.join(__dirname, '../public')));
 
 app.use('/', indexRouter);
 app.use('/api', apiRouter);
+
+app.get('/health', (_req, res) => res.sendStatus(200));
 
 app.listen(PORT, () => {
   console.log(`\n🌐 Macro Simulation Server running at http://localhost:${PORT}`);
