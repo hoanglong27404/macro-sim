@@ -698,12 +698,18 @@ body {
 /* Consistency Ring */
 .consistency-ring-wrap {
   display: flex; flex-direction: column; align-items: center; gap: 4px;
+}
+
+.consistency-ring-inner {
   position: relative;
+  width: 80px; height: 80px;
+  display: flex; align-items: center; justify-content: center;
 }
 
 .consistency-ring {
   width: 80px; height: 80px;
   transform: rotate(-90deg);
+  position: absolute; top: 0; left: 0;
 }
 
 .ring-bg {
@@ -721,11 +727,11 @@ body {
 }
 
 .consistency-pct {
-  position: absolute; top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
   font-family: var(--font-display); font-size: 18px; font-weight: 800;
   background: var(--gradient-text); -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; background-clip: text;
+  z-index: 1;
 }
 
 .consistency-label { font-size: 11px; color: var(--text-secondary); }
