@@ -333,8 +333,8 @@ function renderAnalysis(text) {
   let i = 0;
   const interval = setInterval(() => {
     if (i >= text.length) { clearInterval(interval); return; }
-    el.textContent += text[i];
-    i += 3;
+    i = Math.min(i + 4, text.length);
+    el.textContent = text.slice(0, i);
   }, 16);
 }
 
